@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="./8666629_wifi_icon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div id="container">
+        <header>
+            <h1>Signup</h1>
+        </header>
+        <main>
+            <form id="signupForm" method="post" onsubmit="return validateForm()">
+                <input type="text" id="name" placeholder="Name" required>
+
+                <input type="email" id="email" placeholder="Email" required>
+
+                <input type="password" id="pass" placeholder="Password" required 
+                    pattern=".{8,}" title="Password must be at least 8 characters long">
+
+                <input type="password" id="confirmPass" placeholder="Confirm Password" required 
+                    pattern=".{8,}" title="Password must be at least 8 characters long">
+
+                <input type="date" id="date" placeholder="dd-mm-yyyy" required>
+
+                <div class="input-field">
+                    <input type="radio" id="student" name="radio" required> Student
+                    <input type="radio" id="employee" name="radio"> Employee
+                </div>
+
+                <div class="input-field">
+                    <input type="checkbox" id="temrsAndCondition"> I agree to all the Terms and conditions
+                </div>
+
+                <button type="submit">Signup</button>
+            </form>
+        </main>
+        <footer></footer>
+    </div>
+
+    <script>
+        function validateForm() {
+            // Get the values of the password and confirm password fields
+            const password = document.getElementById('pass').value;
+            const confirmPassword = document.getElementById('confirmPass').value;
+
+            // Check if the passwords match
+            if (password !== confirmPassword) {
+                alert("Passwords do not match!");
+                return false; 
+            }
+
+            return true; 
+        }
+    </script>
+</body>
+
+</html>

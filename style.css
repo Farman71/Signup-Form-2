@@ -1,0 +1,67 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    color: white;
+    font-family: 'Inter', sans-serif; /* Change font-family to 'Inter' */
+    background-color: black;
+}
+
+#container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+h1 {
+    font-size: 40px;
+    font-weight: 600;
+}
+
+input {
+    width: 100%;
+    margin-top: 15px;
+    border: none;
+    border-bottom: 2px solid white;
+    outline: none;
+    font-size: 20px;
+    background-color: black;
+    color: white; 
+}
+
+
+input:focus {
+    background-color: black; 
+    border-bottom: 2px solid white; 
+    box-shadow: none; 
+}
+
+::placeholder {
+    color: white;
+}
+
+.input-field > input {
+    width: fit-content;
+}
+
+button {
+    width: 200px;
+    height: 40px;
+    border: none;
+    outline: none;
+    background-color: white;
+    color: black;
+    font-size: 22px;
+    font-weight: 400;
+    margin-top: 20px;
+}
+input:-webkit-autofill {
+    background-color: black !important;
+    color: white !important;
+    box-shadow: 0 0 0px 1000px black inset !important; /* Ensures the black background is applied */
+    -webkit-text-fill-color: white !important; /* Ensures the text color remains white */
+}
+
+input:-webkit-autofill:focus {
+    border-bottom: 2px solid white;
+}
